@@ -31,7 +31,8 @@
             </ul> -->
             <div class="menu-toggle"><i class='bx bx-menu'></i></div>
 
-            <div class="search-container"> <input placeholder="Buscar Produto..." class="search-input"> <i
+            <div class="search-container"> 
+            <input placeholder="Buscar Produto..." class="search-input"><i
                 class="fa-solid fa-magnifying-glass"></i> </div>
         <div class="cart-icon"> <i class="fa-solid fa-cart-shopping"></i> <span class="cart-badge">0</span> </div>
         </nav>
@@ -41,29 +42,36 @@
 <!-- Contêiner do Menu Letreiro -->
     <div class="menu-letreiro-container">
         <div class="menu-letreiro-texto">
-            🍇​ Açaí Especial de Hoje | 🏍️⚡⚡​ Peça Agora pelo Delivery 🏍️ | ⚡ Qualidade e Sabor que faz a diferença
+            🍇​ Açaí Especial de Hoje / 🏍️⚡​ Peça pelo Delivery 🏍️ / 💜​ Qualidade e Sabor que faz a diferença / ⏰​📆​ Funcionamos de Segunta a Sábado ✔️​  /  ​​​​🤝​ APOIO: 👨‍💻🤖 GETEC TECNOLOGIA - CRIE SEU SITE CONT. 📲​💎(91) 98120-3340
         </div>
-    </div>
+    </div> 
+    <!-- fim do letreiro -->
 
+<!-- Barra de Categorias -->
     <div class="categories-container">
         <nav class="categories-bar">
             <button class="category-btn active" data-category="all"><i class="fa-solid fa-border-all"></i>
                 Todos</button>
-            <button class="category-btn" data-category="Líquidos"><i class="fa-solid fa-mobile-retro"></i>
+            <button class="category-btn" data-category="Líquidos"><i class="fa-regular fa-glass-water-droplet"></i>
                 Líquidos</button>
-            <button class="category-btn" data-category="Farinhas"><i class="fa-solid fa-laptop"></i> Farinhas</button>
-            <button class="category-btn" data-category="Propaganda"><i class="fa-solid fa-headphones"></i>
-                Propaganda</button>
-            <button class="category-btn" data-category="Complemento"><i class="fa-solid fa-keyboard"></i>
+            <button class="category-btn" data-category="Farinhas"><i class="fa-regular fa-bowl-rice"></i> Farinhas</button>
+            <button class="category-btn" data-category="Complemento"><i class="fa-light fa-candy-cane"></i>
                 Complemento</button>
+            <button class="category-btn" data-category="Propaganda"><i class="fa-regular fa-ghost"></i>
+                Propaganda</button>
             <button class="category-btn" data-category="Outros"><i class="fa-solid fa-clock"></i>
                 Outros</button>
+
+            <button id="btnAbrirPainel" style="position:fixed;
+ bottom:700px; right:20px; background: linear-gradient(2deg, #6b11cb38, #2574fc34); padding:8px 9px; border:none; border-radius:10px; color:#fff; font-family:'Poppins', sans-serif; font-weight:600; font-size:1rem; cursor:pointer; box-shadow:0 4px 15px rgba(0,0,0,0.2); z-index:10000;">
+Adm
+</button>
         </nav>
     </div>
 <!-- SESSÃO DE PRODUTOS CADASTRADOS -->
 
     <section class="hero-section">
-        <h2>🏍️💨 ENTREGAS DELIVERY 🏍️💨</h2>
+        <h2>🏍️💨 ENTREGAS DELIVERY - Aceitamos PIX e Cartão 🏍️💨</h2>
         <p>Pediu Chegou!</p>
     </section>
 <!--  SESSÃO DOS PRODUTOS  -->
@@ -163,31 +171,40 @@
         <button class="view-cart-banner-btn">Ver Carrinho</button>
     </div>
 
+    <!--  CAIXA VÍDEO FUNDO COPIADO DO SITE MARIO  -->
+              
+        <div class="caixa-video">
+            <video src="./assets/moto-delivery.mp4" autoplay muted loop></video>
 
-<!-- Painel de Administração Cria por IA-->
+            <div class="mascara"></div>
+        </div>
+<!--  FIM DOS COMANDO NO HTML COPI SITE MARIO -->
 
-<!--  tags criado pela IA DOLA Painel ADM -->
+
+<!-- Painel de Administração Cria por IA DOLA-->
+
 <!-- Modal de Login -->
 <!-- //Botão para abrir o painel de administração (estilizado e posicionado no canto inferior direito da tela) -->
-
 
 <div id="loginModal" 
 style="display:none; 
 position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.6); align-items:center; justify-content:center; z-index:9999;">
   <div style="background:#fff; padding:40px; border-radius:15px; max-width:400px; width:90%; box-shadow: 0 8px 20px rgba(0,0,0,0.3); font-family:'Poppins', sans-serif; text-align:center;">
     <h2 style="margin-bottom:20px; color:#333;">Área Restrita</h2>
-    <input type="password" id="senha" placeholder="Digite a senha" style="width:100%; padding:12px; margin-bottom:20px; border-radius:8px; border:1px solid #ccc; font-family:'Poppins', sans-serif; font-size:1rem;">
-    <button onclick="verificarSenha()" style="background:linear-gradient(135deg, #6a11cb, #2575fc); padding:12px 24px; border:none; border-radius:10px; color:#fff; font-family:'Poppins', sans-serif; font-weight:600; font-size:1rem; cursor:pointer; box-shadow:0 4px 15px rgba(0,0,0,0.2); transition:background 0.3s;">
+    <input type="password" id="senha" placeholder="Digite a senha" style="width:100%; padding:8px; margin-bottom:8px; border-radius:8px; border:1px solid #ccc; font-family:'Poppins', sans-serif; font-size:1rem;">
+    
+    <button onclick="verificarSenha"() style="background:linear-gradient(2deg, #6a11cb, #2575fc); padding:8px 9px; border:none; border-radius:10px; color:#fff; font-family:'Poppins', sans-serif; font-weight:300; font-size:1rem; cursor:pointer; box-shadow:0 4px 15px rgba(0,0,0,0.2); transition:background 0.3s;">
       Entrar
     </button>
   </div>
 </div>
 
-<button onclick="abrirPainel"()>Abrir Painel de Admin</button>
+<!-- <button onclick="abrirPainel"()>Abrir Painel de Admin</button> -->
 
-<button id="btnAbrirPainel" style="position:fixed; bottom:20px; right:20px; background:linear-gradient(135deg, #6a11cb, #2575fc); padding:12px 24px; border:none; border-radius:10px; color:#fff; font-family:'Poppins', sans-serif; font-weight:600; font-size:1rem; cursor:pointer; box-shadow:0 4px 15px rgba(0,0,0,0.2); z-index:10000;">
-Painel de Admin
-</button>
+<!-- <button id="btnAbrirPainel" style="position:fixed;
+ bottom:870px; right:20px; background: linear-gradient(2deg, #6a11cb54, #2575fc52); padding:8px 9px; border:none; border-radius:10px; color:#fff; font-family:'Poppins', sans-serif; font-weight:600; font-size:1rem; cursor:pointer; box-shadow:0 4px 15px rgba(0,0,0,0.2); z-index:10000;">
+Adm
+</button> -->
 
 <div id="admin-panel" style="display:none;
   padding:20px;
@@ -223,13 +240,38 @@ Painel de Admin
         <button type="button" onclick="salvarProduto()">Salvar</button>
     </form>
 </div>
+<!-- FIM DO COMANDO DO PAINEL DE ADM -->
 
+<div class="contact-info">
+<div class="info-item" align-items="center">
+                        <i class='bx bx-time'></i>
+                        <span>Seg-Sáb: 9h às 17h</span>
+                    </div>
+                    <div class="info-item">
+                        <i class='bx bx-phone'></i>
+                        <span>(91) 99390-7605</span>
+                    </div>
+                </div>
 
+<!--  Mapa de Localização da Loja -->
+<iframe width="100%"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.211544611079!2d-48.126125725034775!3d-0.9992649989910959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a42d006f719ee5%3A0x368882a9fb0fed0!2sS%C3%ADtio%20Boa%20Vista!5e0!3m2!1spt-BR!2sbr!4v1772485695607!5m2!1spt-BR!2sbr" 
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
 
+    <!-- Footer -->
     <footer>
-        <p>2026 - Açaí do Odair. Todos os direitos reservados</p>
-        <p>GETEC TECNOLOGIA - Criação de Sites e Apps</p>
+        <div class="social-links">
+            <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="https://wa.me/5581996221060" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+        </div>
+        <p>&copy; 2026 Açaí do Odair. Todos os direitos reservados.</p>
+        <p>📍 Sítio Boa Vista - KM 02 / Estrada de Colares-Vigia Pará | ☎️ (91) 99390-7605 ​🙋‍♂️​</p>
+<br>
+        <p>​​👨‍💻​ GETEC TECNOLOGIA 🤖- Criação de Sites e Apps, contato: 📲​💎​​ (91) 98120-3340</p>
     </footer>
+
 
 </body>
 <script src="./script.js"></script>

@@ -516,10 +516,10 @@ function verificarSenha() {
   }
 }
 
-//  VERSÃO CRIADA PELA IA DOLA Painel ADM
+// //  VERSÃO CRIADA PELA IA DOLA Painel ADM
 
-// Senha definida
-const senhaCorreta = "adminodair"; // Troque pela senha desejada
+// // Senha definida
+const senhaCorreta = "getec12345"; // Troque pela senha desejada
 
 function verificarSenha() {
   const senhaInput = document.getElementById('senha').value;
@@ -532,40 +532,40 @@ function verificarSenha() {
   }
 }
 
-// Abrir painel após login
-document.getElementById('btnAbrirPainel').onclick = function() {
-  abrirPainel(); // sua função para abrir o painel
-};
+// // Abrir painel após login
+// document.getElementById('btnAbrirPainel').onclick = function() {
+//   abrirPainel(); // sua função para abrir o painel
+// };
 
-// Funções do painel (exemplo)
-let produtos = [
-    { id: 1, nome: "Produto 1", preco: 10.00, quantidade: 5 },
-    { id: 2, nome: "Produto 2", preco: 20.00, quantidade: 3 },
-];
+// // Funções do painel (exemplo)
+// let produtos = [
+//     { id: 1, nome: "Produto 1", preco: 10.00, quantidade: 5 },
+//     { id: 2, nome: "Produto 2", preco: 20.00, quantidade: 3 },
+// ];
 
-function abrirPainel() {
-  document.getElementById('admin-panel').style.display = 'block';
-  listarProdutos();
-}
+// function abrirPainel() {
+//   document.getElementById('admin-panel').style.display = 'block';
+//   listarProdutos();
+// }
 
-function fecharPainel() {
-  document.getElementById('admin-panel').style.display = 'none';
-}
+// function fecharPainel() {
+//   document.getElementById('admin-panel').style.display = 'none';
+// }
 
-function listarProdutos() {
-  const tbody = document.getElementById('lista-produtos');
-  tbody.innerHTML = '';
-  produtos.forEach(prod => {
-    const tr = document.createElement('tr');
-    tr.innerHTML = `
-      <td>${prod.nome}</td>
-      <td>R$ ${prod.preco.toFixed(2)}</td>
-      <td>${prod.quantidade}</td>
-      <td><button onclick="editarProduto(${prod.id})">Editar</button></td>
-    `;
-    tbody.appendChild(tr);
-  });
-}
+// function listarProdutos() {
+//   const tbody = document.getElementById('lista-produtos');
+//   tbody.innerHTML = '';
+//   produtos.forEach(prod => {
+//     const tr = document.createElement('tr');
+//     tr.innerHTML = `
+//       <td>${prod.nome}</td>
+//       <td>R$ ${prod.preco.toFixed(2)}</td>
+//       <td>${prod.quantidade}</td>
+//       <td><button onclick="editarProduto(${prod.id})">Editar</button></td>
+//     `;
+//     tbody.appendChild(tr);
+//   });
+// }
 
 function editarProduto(id) {
   const produto = produtos.find(p => p.id === id);
