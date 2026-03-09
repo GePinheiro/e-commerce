@@ -12,7 +12,7 @@
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
-    <title>Açaí do Odair<</title>
+    <title>Açaí do Odair</title>
 </head>
 
 <body>
@@ -62,8 +62,9 @@
             <button class="category-btn" data-category="Outros"><i class="fa-solid fa-clock"></i>
                 Outros</button>
 
-            <button id="btnAbrirPainel" style="position:fixed;
- bottom:700px; right:20px; background: linear-gradient(2deg, #6b11cb38, #2574fc34); padding:8px 9px; border:none; border-radius:10px; color:#fff; font-family:'Poppins', sans-serif; font-weight:600; font-size:1rem; cursor:pointer; box-shadow:0 4px 15px rgba(0,0,0,0.2); z-index:10000;">
+            <button id="btnAbrirPainel" style="position:flex;
+ bottom:700px; right:20px; background: linear-gradient(2deg, #6b11cb38, #2574fc34); 
+ padding:8px 9px; border:none; border-radius:10px; color:#fff; font-family:'Poppins', sans-serif; font-weight:600; font-size:1rem; cursor:pointer; box-shadow:0 4px 15px rgba(0,0,0,0.2); z-index:10000;">
 Adm
 </button>
         </nav>
@@ -192,8 +193,7 @@ position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0
   <div style="background:#fff; padding:40px; border-radius:15px; max-width:400px; width:90%; box-shadow: 0 8px 20px rgba(0,0,0,0.3); font-family:'Poppins', sans-serif; text-align:center;">
     <h2 style="margin-bottom:20px; color:#333;">Área Restrita</h2>
     <input type="password" id="senha" placeholder="Digite a senha" style="width:100%; padding:8px; margin-bottom:8px; border-radius:8px; border:1px solid #ccc; font-family:'Poppins', sans-serif; font-size:1rem;">
-    
-    <button onclick="verificarSenha"() style="background:linear-gradient(2deg, #6a11cb, #2575fc); padding:8px 9px; border:none; border-radius:10px; color:#fff; font-family:'Poppins', sans-serif; font-weight:300; font-size:1rem; cursor:pointer; box-shadow:0 4px 15px rgba(0,0,0,0.2); transition:background 0.3s;">
+    <button onclick="verificarSenha()" style="background:linear-gradient(2deg, #6a11cb, #2575fc); padding:8px 9px; border:none; border-radius:10px; color:#fff; font-family:'Poppins', sans-serif; font-weight:300; font-size:1rem; cursor:pointer; box-shadow:0 4px 15px rgba(0,0,0,0.2); transition:background 0.3s;">
       Entrar
     </button>
   </div>
@@ -206,7 +206,7 @@ position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0
 Adm
 </button> -->
 
-<div id="admin-panel" style="display:none;
+<div id="admin-panel" style="display:none; 
   padding:20px;
   background:#f4f4f4; 
   position:fixed; 
@@ -214,7 +214,6 @@ Adm
   overflow:auto; z-index:999;">
     <h2>Painel de Administração</h2>
     <button onclick="fecharPainel()">Fechar</button>
-    
     
     <h3>Produtos</h3>
     <table border="1" width="100%">
@@ -259,6 +258,8 @@ Adm
         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
         referrerpolicy="no-referrer-when-downgrade"></iframe>
 
+
+                                         <!--  TAGS FIM DA PÁGINA -->
     <!-- Footer -->
     <footer>
         <div class="social-links">

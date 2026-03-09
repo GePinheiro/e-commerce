@@ -495,100 +495,105 @@ document.addEventListener("DOMContentLoaded", () => {
 //  VERSAO BOTAÕ LOGIM CRIADO POR IA DOLA 
 
 // Seleciona o botão da página home
-const btnMostrarLogin = document.getElementById('btnMostrarLogin');
-const modalLogin = document.getElementById('loginModal');
-const btnAbrirPainel = document.getElementById('btnAbrirPainel');
+document.addEventListener('DOMContentLoaded', () => {
+  const btnMostrarLogin = document.getElementById('btnMostrarLogin');
+  const modalLogin = document.getElementById('loginModal');
+  const btnAbrirPainel = document.getElementById('btnAbrirPainel');
+  const btnEntrar = document.getElementById('btnEntrar');
+  const senhaInput = document.getElementById('senha');
+  const adminPanel = document.getElementById('admin-panel');
+  const listaProdutos = document.getElementById('lista-produtos');
 
-btnMostrarLogin.onclick = () => {
-  modalLogin.style.display = 'flex'; // mostra o modal
-};
+  // Estado inicial
+  if (btnAbrirPainel) btnAbrirPainel.style.display = 'none';
+  if (adminPanel) adminPanel.style.display = 'none';
 
-const senhaCorreta = "123456"; // exemplo de senha
-
-function verificarSenha() {
-  const senha = document.getElementById('senha').value;
-  if (senha === senhaCorreta) {
-    modalLogin.style.display = 'none'; // esconde modal
-    btnAbrirPainel.style.display = 'inline-block'; // mostra botão
-  } else {
-    alert('Senha incorreta. Tente novamente.');
-    document.getElementById('senha').value = '';
+  // Mostrar modal de login
+  if (btnMostrarLogin && modalLogin) {
+    btnMostrarLogin.addEventListener('click', () => {
+      modalLogin.style.display = 'flex';
+    });
   }
-}
 
-// //  VERSÃO CRIADA PELA IA DOLA Painel ADM
-
-// // Senha definida
-const senhaCorreta = "getec12345"; // Troque pela senha desejada
-
-function verificarSenha() {
-  const senhaInput = document.getElementById('senha').value;
-  if (senhaInput === senhaCorreta) {
-    document.getElementById('loginModal').style.display = 'none';
-    document.getElementById('btnAbrirPainel').style.display = 'inline-block';
-  } else {
-    alert('Senha incorreta. Tente novamente.');
-    document.getElementById('senha').value = '';
+  // Verificação de senha (fluxo de login)
+  const senhaCorreta = "getec12345"; // exemplo (não recomendado para produção)
+  if (btnEntrar && senhaInput && modalLogin) {
+    btnEntrar.addEventListener('click', () => {
+      const senha = senhaInput.value;
+      if (senha === senhaCorreta) {
+        modalLogin.style.display = 'none'; // esconde modal
+        if (btnAbrirPainel) btnAbrirPainel.style.display = 'inline-block'; // mostra botão
+      } else {
+        alert('Senha incorreta. Tente novamente.');
+        senhaInput.value = '';
+      }
+    });
   }
-}
 
-// // Abrir painel após login
-// document.getElementById('btnAbrirPainel').onclick = function() {
-//   abrirPainel(); // sua função para abrir o painel
-// };
-
-// // Funções do painel (exemplo)
-// let produtos = [
-//     { id: 1, nome: "Produto 1", preco: 10.00, quantidade: 5 },
-//     { id: 2, nome: "Produto 2", preco: 20.00, quantidade: 3 },
-// ];
-
-// function abrirPainel() {
-//   document.getElementById('admin-panel').style.display = 'block';
-//   listarProdutos();
-// }
-
-// function fecharPainel() {
-//   document.getElementById('admin-panel').style.display = 'none';
-// }
-
-// function listarProdutos() {
-//   const tbody = document.getElementById('lista-produtos');
-//   tbody.innerHTML = '';
-//   produtos.forEach(prod => {
-//     const tr = document.createElement('tr');
-//     tr.innerHTML = `
-//       <td>${prod.nome}</td>
-//       <td>R$ ${prod.preco.toFixed(2)}</td>
-//       <td>${prod.quantidade}</td>
-//       <td><button onclick="editarProduto(${prod.id})">Editar</button></td>
-//     `;
-//     tbody.appendChild(tr);
-//   });
-// }
-
-function editarProduto(id) {
-  const produto = produtos.find(p => p.id === id);
-  if (produto) {
-    document.getElementById('produto-id').value = produto.id;
-    document.getElementById('nome-produto').value = produto.nome;
-    document.getElementById('preco-produto').value = produto.preco;
-    document.getElementById('quantidade-produto').value = produto.quantidade;
+  // Abrir painel admin
+  if (btnAbrirPainel) {
+    btnAbrirPainel.addEventListener('click', abrirPainel);
   }
-}
 
-function salvarProduto() {
-  const id = parseInt(document.getElementById('produto-id').value);
-  const nome = document.getElementById('nome-produto').value;
-  const preco = parseFloat(document.getElementById('preco-produto').value);
-  const quantidade = parseInt(document.getElementById('quantidade-produto').value);
-  const index = produtos.findIndex(p => p.id === id);
-  if (index > -1) {
-    produtos[index] = { id, nome, preco, quantidade };
-    alert('Produto atualizado!');
+  // Funções do painel (seu código)
+  let produtos = [
+    { id: 1, nome: "Produto 1", preco: 10.00, quantidade: 5 },
+    { id: 2, nome: "Produto 2", preco: 20.00, quantidade: 3 },
+  ];
+
+  function abrirPainel() {
+    if (adminPanel) adminPanel.style.display = 'block';
     listarProdutos();
   }
-}
 
-//  FIM DO CÓDIGO DE LOGIN DO PAINEL ADM, O RESTANTE DO CÓDIGO É DO SITE NORMAL, COM O SISTEMA DE FILTRO, CARRINHO, ENTREGA E RETIRADA, CUPOM DE DESCONTO E FINALIZAÇÃO DO PEDIDO VIA WHATSAPP
+  function fecharPainel() {
+    if (adminPanel) adminPanel.style.display = 'none';
+  }
+
+  function listarProdutos() {
+    if (!listaProdutos) return;
+    listaProdutos.innerHTML = '';
+    produtos.forEach(prod => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>${prod.nome}</td>
+        <td>R$ ${prod.preco.toFixed(2)}</td>
+        <td>${prod.quantidade}</td>
+        <td><button onclick="editarProduto(${prod.id})">Editar</button></td>
+      `;
+      listaProdutos.appendChild(tr);
+    });
+  }
+
+  // A função editarProduto depende dos seus inputs HTML existentes.
+  window.editarProduto = function(id) {
+    const produto = produtos.find(p => p.id === id);
+    if (produto) {
+      document.getElementById('produto-id').value = produto.id;
+      document.getElementById('nome-produto').value = produto.nome;
+      document.getElementById('preco-produto').value = produto.preco;
+      document.getElementById('quantidade-produto').value = produto.quantidade;
+    }
+  };
+
+  window.salvarProduto = function() {
+    const id = parseInt(document.getElementById('produto-id').value, 10);
+    const nome = document.getElementById('nome-produto').value;
+    const preco = parseFloat(document.getElementById('preco-produto').value);
+    const quantidade = parseInt(document.getElementById('quantidade-produto').value, 10);
+    const index = produtos.findIndex(p => p.id === id);
+    if (index > -1) {
+      produtos[index] = { id, nome, preco, quantidade };
+      alert('Produto atualizado!');
+      listarProdutos();
+    }
+  };
+});
+
+
+  // A função editarProduto depende dos seus inputs HTML existentes.
+  
+//  FIM DO CÓDIGO DE LOGIN DO PAINEL ADM, O RESTANTE DO CÓDIGO É DO SITE NORMAL, 
+// COM O SISTEMA DE FILTRO, CARRINHO, ENTREGA E RETIRADA, CUPOM DE DESCONTO E FINALIZAÇÃO 
+// DO PEDIDO VIA WHATSAPP
 

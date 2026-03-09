@@ -1951,20 +1951,6 @@ option[disabled].reservado { background: #eee; color: #888; }
   .svc-muted{ font-size:.9rem; }
 }
 
-
-/* Estilo do painel de administração // FEITO PELA IA DOLA*/
-
-.btnAbrirPainel {
-display:none; margin-top:20px; 
-padding:14px 28px; 
-background:linear-gradient(135deg, #ff7e5f, #feb47b); 
-border:none; border-radius:12px; color:#fff; 
-font-family:'Poppins', sans-serif; 
-font-weight:600; font-size:1.2rem; 
-cursor:pointer; box-shadow:0 8px 20px rgba(0,0,0,0.3); 
-transition:transform 0.2s, box-shadow 0.2s;
-}
-
 #admin-panel {
   background: #fff;
   border-radius: 15px;
@@ -2048,6 +2034,21 @@ transition:transform 0.2s, box-shadow 0.2s;
 }
 #form-editar button:hover {
   background: #45a049;
+}
+
+/* PARTE ESTILIZADA POR GENILDO */
+
+/* Estilo do painel de administração // FEITO PELA IA DOLA*/
+
+.btnAbrirPainel {
+display:none; margin-top:20px; 
+padding:14px 28px; 
+background:linear-gradient(135deg, #ff7e5f, #feb47b); 
+border:none; border-radius:12px; color:#fff; 
+font-family:'Poppins', sans-serif; 
+font-weight:600; font-size:1.2rem; 
+cursor:pointer; box-shadow:0 8px 20px rgba(0,0,0,0.3); 
+transition:transform 0.2s, box-shadow 0.2s;
 }
 
 /*  CAIXA VIDEO VINDO DO SITE MARIO */
