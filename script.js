@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", () => {
     // --- SELETORES GLOBAIS ---
     const cartIcon = document.querySelector(".cart-icon"),
@@ -31,94 +33,94 @@ document.addEventListener("DOMContentLoaded", () => {
     const produtos = [
         {
             id: 1,
-            nome: "iPhone 15 Pro",
-            categoria: "smartphones",
-            preco: 7999,
+            nome: "AÇAÍ MÉDIO 1 LITRO",
+            categoria: "Líquidos", 
+            preco: 20,
             imagem:
-                "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=400",
-            descricao: "Smartphone Apple com câmera avançada",
+                "assets/açai-litros.png",
+            descricao: "Açaí Médio 1 Litro - Delicioso e Ótima Qualidade",
         },
         {
             id: 2,
-            nome: "MacBook Air M2",
-            categoria: "laptops",
-            preco: 8999,
+            nome: "FARINHA DE TAPIOCA",
+            categoria: "Farinhas", /*laptops*/
+            preco: 3,
             imagem:
-                "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400",
-            descricao: "Notebook Apple ultrafino e potente",
+                "assets/farinha-de-tapioca.png",
+            descricao: "Farinha de tapioca, ótimo para uma opção com açaí",
         },
         {
             id: 3,
-            nome: "AirPods Pro",
-            categoria: "headphones",
-            preco: 1899,
+            nome: "BACABA",
+            categoria: "Líquidos", /*smartphones*/
+            preco: 18,
             imagem:
-                "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=400",
-            descricao: "Fones sem fio com cancelamento de ruído",
+                "assets/Bacaba.png",
+            descricao: "Bacaba boa opção para o cliente",
         },
         {
             id: 4,
-            nome: "Samsung Galaxy S24",
-            categoria: "smartphones",
-            preco: 5499,
+            nome: "CHARQUE BOVINO",
+            categoria: "Complemento", /*smartphones*/
+            preco: 30,
             imagem:
-                "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=400",
-            descricao: "Smartphone Samsung com tela AMOLED",
+                "assets/Charque.png",
+            descricao: "Charque Bovino, ótima opção para você que gosta do açaí com complemento",
         },
         {
             id: 5,
-            nome: "Apple Watch Series 9",
-            categoria: "smartwatch",
-            preco: 3299,
+            nome: "FARINHA DE MANDIOCA",
+            categoria: "Farinhas", /*smartwatch*/
+            preco: 10,
             imagem:
-                "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=400",
-            descricao: "Relógio inteligente com monitoramento",
+                "assets/FARINHA-1.png",
+            descricao: "Farinha de Mandioca, gostosa torrada ótima opção com açaí",
         },
         {
             id: 6,
-            nome: "Magic Keyboard",
-            categoria: "accessories",
-            preco: 499,
+            nome: "Banner da Empresa",
+            categoria: "Propaganda",
+            preco: 0,
             imagem:
-                "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=400",
-            descricao: "Teclado mecânico RGB para gamers",
+                "assets/maquina-pix.png",
+            descricao: "Aceitamos Pix, Débido e Crédito",
         },
         {
             id: 7,
-            nome: "Sony WH-1000XM5",
-            categoria: "headphones",
-            preco: 2499,
+            nome: "AÇAÍ MEIO LITRO",
+            categoria: "Líquidos", /*headphones*/
+            preco: 10,
             imagem:
-                "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=400",
-            descricao: "Fone com cancelamento de ruído",
+                "assets/açai-meio-litro.png",
+            descricao: "1/2 Litro de Açaí - Porção na medida",
         },
         {
             id: 8,
-            nome: "Dell XPS 13",
-            categoria: "laptops",
-            preco: 7999,
+            nome: "Espaço Propaganda",
+            categoria: "Propaganda", /*laptops*/
+            preco: 0,
             imagem:
-                "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?w=400",
-            descricao: "Notebook Windows premium",
+                "assets/Propaganda-1.png",
+            descricao: "Propaganda",
         },
-        {
-            id: 9,
-            nome: "Capa de Silicone iPhone",
-            categoria: "accessories",
-            preco: 299,
-            imagem:
-                "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MPU63?wid=572&hei=572&fmt=jpeg&qlt=95&.v=1661472856272",
-            descricao: "Proteção e estilo para seu iPhone",
-        },
-        {
-            id: 10,
-            nome: "Carregador MagSafe",
-            categoria: "accessories",
-            preco: 450,
-            imagem:
-                "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MHXH3?wid=572&hei=572&fmt=jpeg&qlt=95&.v=1661269784338",
-            descricao: "Carregamento sem fio rápido e fácil",
-        },
+        // {
+        //     id: 9,
+        //     nome: "Capa de Silicone iPhone",
+        //     categoria: "accessories",
+        //     preco: 299,
+        //     imagem:
+        //         "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MPU63?wid=572&hei=572&fmt=jpeg&qlt=95&.v=1661472856272",
+        //     descricao: "Proteção e estilo para seu iPhone",
+        // },
+        // {
+        //     id: 10,
+        //     nome: "Carregador MagSafe",
+        //     categoria: "accessories",
+        //     preco: 450,
+        //     imagem:
+        //         "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MHXH3?wid=572&hei=572&fmt=jpeg&qlt=95&.v=1661269784338",
+        //     descricao: "Carregamento sem fio rápido e fácil",
+        // },
     ];
     const validCoupons = [{ code: "DESCONTO10", type: "percentage", value: 10 }];
     let carrinho = [],
@@ -199,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const container = document.querySelector(".products-container");
         if (produtosFiltrados.length === 0) {
             container.innerHTML = `
-                        <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; color: #999;">
+                        <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; color: #f8f405;">
                             <i class="fa-solid fa-box-open" style="font-size: 3rem; margin-bottom: 1rem;"></i>
                             <p style="font-size: 1.2rem; font-weight: 600;">Nenhum produto encontrado</p>
                         </div>
@@ -486,3 +488,107 @@ document.addEventListener("DOMContentLoaded", () => {
     filtrarEMostrarProdutos();
     atualizarCarrinho();
 });
+
+
+
+
+//  VERSAO BOTAÕ LOGIM CRIADO POR IA DOLA 
+
+// Seleciona o botão da página home
+const btnMostrarLogin = document.getElementById('btnMostrarLogin');
+const modalLogin = document.getElementById('loginModal');
+const btnAbrirPainel = document.getElementById('btnAbrirPainel');
+
+btnMostrarLogin.onclick = () => {
+  modalLogin.style.display = 'flex'; // mostra o modal
+};
+
+const senhaCorreta = "123456"; // exemplo de senha
+
+function verificarSenha() {
+  const senha = document.getElementById('senha').value;
+  if (senha === senhaCorreta) {
+    modalLogin.style.display = 'none'; // esconde modal
+    btnAbrirPainel.style.display = 'inline-block'; // mostra botão
+  } else {
+    alert('Senha incorreta. Tente novamente.');
+    document.getElementById('senha').value = '';
+  }
+}
+
+//  VERSÃO CRIADA PELA IA DOLA Painel ADM
+
+// Senha definida
+const senhaCorreta = "adminodair"; // Troque pela senha desejada
+
+function verificarSenha() {
+  const senhaInput = document.getElementById('senha').value;
+  if (senhaInput === senhaCorreta) {
+    document.getElementById('loginModal').style.display = 'none';
+    document.getElementById('btnAbrirPainel').style.display = 'inline-block';
+  } else {
+    alert('Senha incorreta. Tente novamente.');
+    document.getElementById('senha').value = '';
+  }
+}
+
+// Abrir painel após login
+document.getElementById('btnAbrirPainel').onclick = function() {
+  abrirPainel(); // sua função para abrir o painel
+};
+
+// Funções do painel (exemplo)
+let produtos = [
+    { id: 1, nome: "Produto 1", preco: 10.00, quantidade: 5 },
+    { id: 2, nome: "Produto 2", preco: 20.00, quantidade: 3 },
+];
+
+function abrirPainel() {
+  document.getElementById('admin-panel').style.display = 'block';
+  listarProdutos();
+}
+
+function fecharPainel() {
+  document.getElementById('admin-panel').style.display = 'none';
+}
+
+function listarProdutos() {
+  const tbody = document.getElementById('lista-produtos');
+  tbody.innerHTML = '';
+  produtos.forEach(prod => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${prod.nome}</td>
+      <td>R$ ${prod.preco.toFixed(2)}</td>
+      <td>${prod.quantidade}</td>
+      <td><button onclick="editarProduto(${prod.id})">Editar</button></td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+function editarProduto(id) {
+  const produto = produtos.find(p => p.id === id);
+  if (produto) {
+    document.getElementById('produto-id').value = produto.id;
+    document.getElementById('nome-produto').value = produto.nome;
+    document.getElementById('preco-produto').value = produto.preco;
+    document.getElementById('quantidade-produto').value = produto.quantidade;
+  }
+}
+
+function salvarProduto() {
+  const id = parseInt(document.getElementById('produto-id').value);
+  const nome = document.getElementById('nome-produto').value;
+  const preco = parseFloat(document.getElementById('preco-produto').value);
+  const quantidade = parseInt(document.getElementById('quantidade-produto').value);
+  const index = produtos.findIndex(p => p.id === id);
+  if (index > -1) {
+    produtos[index] = { id, nome, preco, quantidade };
+    alert('Produto atualizado!');
+    listarProdutos();
+  }
+}
+
+//  FIM DO CÓDIGO DE LOGIN DO PAINEL ADM, O RESTANTE DO CÓDIGO É DO SITE NORMAL, COM O SISTEMA DE FILTRO, CARRINHO, ENTREGA E RETIRADA, CUPOM DE DESCONTO E FINALIZAÇÃO DO PEDIDO VIA WHATSAPP
+
